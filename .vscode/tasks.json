@@ -2,9 +2,9 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build active file",
+      "label":  "build-c",
       "type": "shell",
-      "command": "/usr/bin/gcc",
+      "command": "gcc",
       "args": [
         "-Wall",
         "-Wextra",
@@ -19,6 +19,7 @@
         "isDefault": true
       },
       "problemMatcher": ["$gcc"]
+      "detail": "Build active C file"
     }
   ]
 }
