@@ -6,6 +6,9 @@
       "type": "shell",
       "command": "/usr/bin/gcc",
       "args": [
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
         "-g",
         "${file}",
         "-o",
