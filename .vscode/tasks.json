@@ -18,8 +18,10 @@
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": ["$gcc"]
+      "problemMatcher": ["$gcc"],
       "detail": "Build active C file"
     }
   ]
 }
+
+
