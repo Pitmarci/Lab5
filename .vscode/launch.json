@@ -15,5 +15,7 @@
       "miDebuggerPath": "/usr/bin/gdb",
       "preLaunchTask": "build active file"
     }
-  ]
+  ],
+  "compounds": [],
+  "default": "Debug active file"
 }
