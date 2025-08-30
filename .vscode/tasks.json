@@ -2,17 +2,12 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build active file",
+      "label": "build and run active file",
       "type": "shell",
-      "command": "/usr/bin/gcc",
+      "command": "/bin/bash",
       "args": [
-        "-Wall",
-        "-Wextra",
-        "-Wpedantic",
-        "-g",
-        "${file}",
-        "-o",
-        "${fileDirname}/${fileBasenameNoExtension}"
+        "-c",
+        "/usr/bin/gcc -Wall -Wextra -Wpedantic -g ${file} -o ${fileDirname}/${fileBasenameNoExtension} && ${fileDirname}/${fileBasenameNoExtension}"
       ],
       "group": {
         "kind": "build",
