@@ -1,11 +1,9 @@
 /* Task description:
 Try the following program, what output do you expect? What do you get, why? 
 */
-/*
-Try the following program. What does while (true) mean?
-*/
 
-//comment this and uncomment the next to procees to the next part 
+
+//comment this and uncomment the next to proceed to the next part 
 #include <stdio.h>
 
 int main(void) {
