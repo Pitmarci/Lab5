@@ -1,9 +1,9 @@
 /* Task description:
 Write a program that contains an array of 10 elements initialized by values of your choice. (pls check the homepage too)
 
-Shift all elements in the array towards the beginning of the array by one cell. 
-The first element should go into the last cell (you may call this process rotation). 
-Repeat the shifting (rotation) process 10 times, printing the array after each step. 
+Shift all elements in the array towards the beginning of the array by one cell.
+The first element should go into the last cell (you may call this process rotation).
+Repeat the shifting (rotation) process 10 times, printing the array after each step.
 Your output should be similar to the one shown on the right side.
 
 25 69 54  8 77  6 29 10  3 98
@@ -14,7 +14,7 @@ Your output should be similar to the one shown on the right side.
  6 29 10  3 98 25 69 54  8 77
 29 10  3 98 25 69 54  8 77  6
 
-Keep in mind, that the task is not to obtain the output by using tricky indexing! 
+Keep in mind, that the task is not to obtain the output by using tricky indexing!
 The elements of the array must actually move around!
 
 LOOP
@@ -27,16 +27,33 @@ END OF LOOP
 
 Hint
 
-There is no need for a second array! The second element can overwrite the first, the third can overwrite the second… 
+There is no need for a second array! The second element can overwrite the first, the third can overwrite the second…
 The only question is what shall we put into the last cell. Make a drawing and find out the necessary steps.
 
 */
 
-
 #include <stdio.h>
 
-int main(){
-int array[10] = {25, 69, 54, 8, 77, 6, 29, 10, 3, 98};
+int main()
+{
+  int array[10] = {25, 69, 54, 8, 77, 6, 29, 10, 3, 98};
+  int n;
+  for (int i = 0; i < 10; i++)
+  {
+    for (int j = 0; j < 10; j++)
+    {
+      if (array[j] < 10)
+        printf("  %d", array[j]);
+      else
+        printf(" %d", array[j]);
+    }
+    printf("\n");
+
+    n = array[0];
+    for (int j = 0; j < 9; j++)
+      array[j] = array[j + 1];
+    array[9] = n;
+  }
 
   return 0;
 }
